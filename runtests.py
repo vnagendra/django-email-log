@@ -17,6 +17,7 @@ if not settings.configured:
             'django.contrib.admin',
             'email_log',
             'email_log.tests',
+            'south',
         ),
         DATABASES={
             'default': {
@@ -25,6 +26,7 @@ if not settings.configured:
         },
         EMAIL_LOG_BACKEND = 'django.core.mail.backends.locmem.EmailBackend',
         ROOT_URLCONF='email_log.tests.urls',
+        SOUTH_TESTS_MIGRATE=True,
     )
 
 
